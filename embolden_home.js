@@ -1,24 +1,31 @@
 import React from 'react';
 import {View, ScrollView, Text, Button, TextInput, StyleSheet} from 'react-native';
-/*import emboldenLoginPage from '/Users/jonathanbruce/Coding/EmboldenApp/embolden_login.js';*/
+import EmboldenLoginPage from '/Users/jonathanbruce/Coding/FirstExpoProject/app/embolden_login.js';
+import BoldButton from '/Users/jonathanbruce/Coding/FirstExpoProject/app/boldbutton.js';
 
 const emboldenHomePage = () => {
 
     return (
-        <ScrollView>
-            <View style={styles.container}>
-                <Text style={styles.title}>Embolden</Text>
-                <Text style={styles.subtext}>An app to empower and encourage those on mission for Christ</Text>
-                  <Button
-                        style={styles.buttonPadding}
-                        title="         "
-                  />
-                <Text>By JBruce</Text>
-            </View>
+        <View>
+            <ScrollView>
+            <EmboldenLoginPage/>
+                <View style={styles.container}>
+                    <Text style={styles.title}>Embolden</Text>
+                    <Text style={styles.subtext}>An app to empower and encourage those on mission for Christ</Text>
+                    <Button
+                            style={styles.buttonPadding}
+                            title="         "
+                    />
+                    <Text>By JBruce</Text>
+                </View>
+                <View>
+                </View>
+                <Text style={styles.footer}>.j.</Text>
+            </ScrollView>
             <View>
+                <BoldButton/>
             </View>
-            <Text style={styles.footer}>.j.</Text>
-        </ScrollView>
+        </View>
           /*<View>
               <Text>Login</Text>
               <TextInput
@@ -54,6 +61,8 @@ const styles = StyleSheet.create ({
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "gold",
+        paddingTop: 25,
+        paddingBottom: 25,
     },
 
     title: {
@@ -65,7 +74,6 @@ const styles = StyleSheet.create ({
         fontSize: 16,
         marginLeft: 40,
         marginRight: 40,
-
     },
 
     buttonPadding: {
