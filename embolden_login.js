@@ -1,7 +1,7 @@
 import React from 'react';
-import {View, Text, TextInput, Stylesheet} from 'react-native';
+import {View, Text, TextInput, Button} from 'react-native';
 
-const emboldenLoginPage = () => {
+export default function EmboldenLoginPage() {
     return (
         <View>
             <Text>Login</Text>
@@ -22,6 +22,5 @@ const emboldenLoginPage = () => {
                 color="dodgerblue"
             />
         </View>
-)};
-
-export default emboldenLoginPage;
+    );
+}
