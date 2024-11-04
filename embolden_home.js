@@ -21,10 +21,10 @@ const emboldenHomePage = () => {
                 <View>
                 </View>
                 <Text style={styles.footer}>.j.</Text>
-            </ScrollView>
             <View>
                 <BoldButton/>
             </View>
+            </ScrollView>
         </View>
           /*<View>
               <Text>Login</Text>
