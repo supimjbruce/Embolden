@@ -27,6 +27,7 @@ export default function Index() {
     <View style={styles.container}>
       <ScrollView>
           <View style={styles.indexContent}> {/* Get all of this content centered like 'Ofe'*/}
+            {/* Need to get the fonts from the Figma design in here.*/}
             <Text style={styles.title}>EMBOLDEN</Text>
             <Text style={styles.subtext}>An app to empower and encourage <br></br>those on mission for Christ</Text>
 
