@@ -1,10 +1,9 @@
-import {View, Text, TextInput, Button} from 'react-native';
 import React from 'react';
+import {View, Text, TextInput, Button} from 'react-native';
 
-export default function EmboldenLoginPage() {
+export default function LoginModal() {
     return (
         <View>
-            <Text>Login</Text>
             <TextInput
                 style={{height: 40}}
                 placeholder="Username"
