@@ -1,21 +1,21 @@
 import React from 'react';
-import {View, Text, TextInput, Button} from 'react-native';
+import {View, Text, StyleSheet, TextInput, Button} from 'react-native';
 
 export default function LoginModal() {
     return (
-        <View>
+        <View style={styles.container}>
             <TextInput
-                style={{height: 40}}
-                placeholder="Username"
+                style={styles.textInput}
+                placeholder="  Username"
                 defaultValue=""
             />
             <TextInput
-                style={{height: 40}}
-                placeholder="Password"
+                style={styles.textInput}
+                placeholder="  Password"
                 defaultValue=""
             />
             <></>
-            <Text>Don't have an Embolden account? Tap the button below!</Text>
+            <Text style={{textAlign: 'center', padding: 10,}}>Don't have an Embolden account? Tap the button below!</Text>
             <Button
                 title="Create Account"
                 color="dodgerblue"
@@ -23,3 +23,18 @@ export default function LoginModal() {
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        backgroundColor: '#798645',
+        padding: 25,
+        marginTop: 10,
+    },
+
+    textInput: {
+        backgroundColor: 'white',
+        height: 40,
+        borderRadius: 15,
+        margin: 10,
+    },
+});
