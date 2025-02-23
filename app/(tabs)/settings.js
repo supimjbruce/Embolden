@@ -1,9 +1,13 @@
-import {Text, View, StyleSheet} from 'react-native';
+import {Text, View, StyleSheet, FlatList} from 'react-native';
 
 export default function SettingsScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Settings Screen</Text>
+      <Text style={styles.text}>Settings</Text>
+
+      <View>
+        <Text>About</Text>
+      </View>
     </View>
   );
 }
