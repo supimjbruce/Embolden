@@ -14,7 +14,7 @@ export default function BoldButton() {
                 <Text
                 style={styles.title}
                 onPress={verseFunction}>
-                    BOLD BUTTON
+                    BOLD
                 </Text>
             </View>
         </View>
@@ -27,11 +27,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         paddingTop: 25,
+        paddingRight: 10,
     },
 
     boldButtonStyle: {
         flex: 1,
-        width: 200,
+        width: 100,
         justifyContent: 'center',
         backgroundColor: 'olivedrab',
         padding: 10,
@@ -39,6 +40,7 @@ const styles = StyleSheet.create({
     },
 
     title: {
+        fontFamily: 'Poppins-Black',
         fontSize: 24,
         color: 'white',
         fontWeight: 'bold',
