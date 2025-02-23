@@ -1,7 +1,7 @@
 import {View, Text, Button, TextInput, StyleSheet, TouchableOpacity} from "react-native";
 /* import {Link} from 'expo-router'; */
 import React, {useState} from 'react';
-import BoldButton from "../../components/boldbutton";
+import BoldButton from "../../components/boldButton";
 import LoginModal from "../../components/loginModal";
 /* import EmboldenLoginPage from '/Users/jonathanbruce/Coding/FirstExpoProject/app/embolden_login.js';
 import BoldButton from '/Users/jonathanbruce/Coding/FirstExpoProject/app/boldbutton.js'; */
