@@ -1,4 +1,4 @@
-import {View, ScrollView, Text, Button, TextInput, StyleSheet} from "react-native";
+import {View, Text, Button, TextInput, StyleSheet, TouchableOpacity} from "react-native";
 /* import {Link} from 'expo-router'; */
 import React, {useState} from 'react';
 import BoldButton from "../../components/boldbutton";
@@ -25,24 +25,21 @@ export default function Index() {
 
   return (
     <View style={styles.container}>
-      <ScrollView>
-          <View style={styles.indexContent}> {/* Get all of this content centered like 'Ofe'*/}
-            {/* Need to get the fonts from the Figma design in here.*/}
-            <Text style={styles.title}>EMBOLDEN</Text>
-            <Text style={styles.subtext}>An app to empower and encourage <br></br>those on mission for Christ</Text>
-
-            <View>
-              <BoldButton></BoldButton>
-            </View>
-
-            <View>
-              <Button title="Login" onPress={handleLoginButtonPress} />
-              {isLoginModalVisible && <LoginModalReference />}
-            </View>
-
-            <Text style={styles.footer}><b>.j.</b></Text>
-          </View>
-      </ScrollView>
+      <View style={styles.titleView}>
+        <Text style={styles.title}>EMBOLDEN</Text>
+        <Text style={styles.subtext}>An app to empower and encourage <br></br>those on mission for Christ</Text>
+        {isLoginModalVisible && <LoginModalReference />} {/*I want to make this an overlay modal like trackr, just haven't had time to implement yet.*/}
+      </View>
+      <View>
+      </View>
+      <View style={styles.flexEndFooter}>
+        <TouchableOpacity style={styles.loginButtonFooter}> {/*Want to make it so that the whole button area can be pressed and can active BOLD BUTTON. */}
+          <Button title="Login" onPress={handleLoginButtonPress} style={styles.button}/>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.boldButtonFooter}> {/*Want to make it so that the whole button area can be pressed and can active BOLD BUTTON. */}
+          <BoldButton></BoldButton>
+        </TouchableOpacity>
+      </View>
     </View>
 
     /*<View>
@@ -77,37 +74,53 @@ give this multiple screens!
 
 const styles = StyleSheet.create ({
   container: {
-      flex: 1,
-      backgroundColor: "#FFC94A",
-      paddingTop: 25,
-      paddingBottom: 25,
+    flex: 1,
+    backgroundColor: "#FFC94A",
+    paddingTop: 25,
+    paddingBottom: 25,
+    justifyContent: 'center',
+    alignContent: 'center',
   },
 
-  indexContent: {
+  titleView: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
   },
 
   title: {
-      fontSize: 64,
-      fontWeight: '900',
+    fontFamily: 'Poppins-Black',
+    fontSize: 80,
+    fontWeight: '900',
+    textAlign: 'center',
   },
 
   subtext: {
-      fontSize: 16,
-      marginLeft: 40,
-      marginRight: 40,
-      textAlign: 'center',
+    fontSize: 16,
+    marginLeft: 40,
+    marginRight: 40,
+    textAlign: 'center',
   },
 
-  buttonPadding: {
-      width: 15,
+  flexEndFooter: {
+    flex: 1,
+    justifyContent: 'flex-end',
   },
 
-  footer: {
-      alignSelf: 'flex-end', /* Need to figure out how to make a footer and also
-      put this at the end of the app.*/
+  loginButtonFooter: {
+    flex: 3,
+    alignSelf: 'flex-end',
+    maxHeight: 20,
+    paddingRight: 10,
   },
 
+  boldButtonFooter: {
+    flex: 3,
+    alignSelf: 'flex-end',
+    maxHeight: 100,
+  },
+
+  /*footer: {
+    alignSelf: 'flex-end', //Need to figure out how to make a footer and also
+    //put this at the end of the app.
+  },*/
 });
