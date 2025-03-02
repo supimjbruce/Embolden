@@ -1,17 +1,14 @@
-import {View, Text, Button, TextInput, StyleSheet, TouchableOpacity} from "react-native";
-/* import {Link} from 'expo-router'; */
+import {View, Text, Button, StyleSheet, TouchableOpacity} from "react-native";
 import React, {useState} from 'react';
 import BoldButton from "../../components/boldButton";
 import LoginModal from "../../components/loginModal";
-/* import EmboldenLoginPage from '/Users/jonathanbruce/Coding/FirstExpoProject/app/embolden_login.js';
-import BoldButton from '/Users/jonathanbruce/Coding/FirstExpoProject/app/boldbutton.js'; */
 
 /* ^ Make the Login page and BoldButton as Modals/Components and put them in the /Components folder! */
 
 const LoginModalReference = () => {
   return (
     <View>
-      <LoginModal></LoginModal>
+      <LoginModal />
     </View>
   );
 };
@@ -26,9 +23,9 @@ export default function Index() {
   return (
     <View style={styles.container}>
       <View style={styles.titleView}>
+        {isLoginModalVisible && <LoginModalReference />}
         <Text style={styles.title}>EMBOLDEN</Text>
         <Text style={styles.subtext}>An app to empower and encourage <br></br>those on mission for Christ</Text>
-        {isLoginModalVisible && <LoginModalReference />} {/*I want to make this an overlay modal like trackr, just haven't had time to implement yet.*/}
       </View>
       <View>
       </View>
@@ -41,26 +38,6 @@ export default function Index() {
         </TouchableOpacity>
       </View>
     </View>
-
-    /*<View>
-      <Text>Login</Text>
-      <TextInput
-          style={{height: 40}}
-          placeholder="Username"
-          defaultValue=""
-      />
-      <TextInput
-          style={{height: 40}}
-          placeholder="Password"
-          defaultValue=""
-      />
-      <></>
-      <Text>Don't have an Embolden account? Tap the button below!</Text>
-      <Button
-          title="Create Account"
-          color="dodgerblue"
-      />
-    </View>*/
   );
 }
 
